@@ -18,4 +18,4 @@ public class Reservation {
     public String getRoomType() {
         return roomType;
     }
-}
+}}

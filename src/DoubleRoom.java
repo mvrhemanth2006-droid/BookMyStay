@@ -1,17 +1,6 @@
-public abstract class Room {
-    protected int numberOfBeds;
-    protected int squareFeet;
-    protected double pricePerNight;
+public class DoubleRoom extends Room {
 
-    public Room(int numberOfBeds, int squareFeet, double pricePerNight) {
-        this.numberOfBeds = numberOfBeds;
-        this.squareFeet = squareFeet;
-        this.pricePerNight = pricePerNight;
-    }
-
-    public void displayRoomDetails() {
-        System.out.println("Beds: " + numberOfBeds);
-        System.out.println("Room Size: " + squareFeet + " sq ft");
-        System.out.println("Price Per Night: ₹" + pricePerNight);
+    public DoubleRoom() {
+        super(2, 400, 2500.0);
     }
 }

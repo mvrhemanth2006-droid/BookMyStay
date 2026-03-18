@@ -1,6 +1,6 @@
-public class DoubleRoom extends Room {
+public class SingleRoom extends Room {
 
-    public DoubleRoom() {
-        super(2, 400, 2500.0);
+    public SingleRoom() {
+        super(1, 250, 1500.0);
     }
 }

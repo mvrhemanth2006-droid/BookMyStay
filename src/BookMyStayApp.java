@@ -5,9 +5,7 @@ public class BookMyStayApp {
 
         System.out.println("===== Book My Stay App =====");
 
-        /* --------------------------
-           Use Case 4: Room Search
-           -------------------------- */
+
 
         Room singleRoom = new SingleRoom();
 
@@ -25,8 +23,6 @@ public class BookMyStayApp {
                 doubleRoom,
                 suiteRoom
         );
-
-        
 
         System.out.println("\nBooking Request Queue:");
 
@@ -52,6 +48,25 @@ public class BookMyStayApp {
             );
         }
 
+
+
+
+        System.out.println("\nRoom Allocation:");
+
+
+        bookingQueue.addRequest(r1);
+        bookingQueue.addRequest(r2);
+        bookingQueue.addRequest(r3);
+
+        RoomAllocationService allocationService = new RoomAllocationService();
+
+        while (bookingQueue.hasPendingRequests()) {
+
+            Reservation request = bookingQueue.getNextRequest();
+
+            allocationService.allocateRoom(request, inventory);
+        }
+
         int singleAvailable = 5;
         int doubleAvailable = 3;
 
@@ -62,6 +77,7 @@ public class BookMyStayApp {
         System.out.println("\nDouble Room Details");
         doubleRoom.displayRoomDetails();
         System.out.println("Available: " + doubleAvailable);
+ develop
  develop
     }
 }

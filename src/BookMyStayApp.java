@@ -2,13 +2,17 @@ public class BookMyStayApp {
 
     public static void main(String[] args) {
 
+
         System.out.println("===== Book My Stay App =====");
 
 
 
         Room singleRoom = new SingleRoom();
+
+        Room single = new SingleRoom();
+ develop
         Room doubleRoom = new DoubleRoom();
-        Room suiteRoom = new SuiteRoom();
+
 
         RoomInventory inventory = new RoomInventory();
         RoomSearchService searchService = new RoomSearchService();
@@ -19,8 +23,6 @@ public class BookMyStayApp {
                 doubleRoom,
                 suiteRoom
         );
-
-
 
         System.out.println("\nBooking Request Queue:");
 
@@ -48,6 +50,7 @@ public class BookMyStayApp {
 
 
 
+
         System.out.println("\nRoom Allocation:");
 
 
@@ -63,5 +66,18 @@ public class BookMyStayApp {
 
             allocationService.allocateRoom(request, inventory);
         }
+
+        int singleAvailable = 5;
+        int doubleAvailable = 3;
+
+        System.out.println("Single Room Details");
+        single.displayRoomDetails();
+        System.out.println("Available: " + singleAvailable);
+
+        System.out.println("\nDouble Room Details");
+        doubleRoom.displayRoomDetails();
+        System.out.println("Available: " + doubleAvailable);
+ develop
+ develop
     }
 }
